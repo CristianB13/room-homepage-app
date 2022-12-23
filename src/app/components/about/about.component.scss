@@ -1,0 +1,41 @@
+@import "../../../styles/colors";
+@import "../../../styles/fonts";
+
+:host {
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+
+  &.image {
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2.5rem;
+    gap: 1rem;
+
+    h1 {
+      font-family: $leagueSpartan-semibold;
+      color: $black;
+      letter-spacing: 0.5rem;
+    }
+
+    p {
+      font-family: $leagueSpartan-medium;
+      color: $dark-gray;
+      line-height: 1.5rem;
+    }
+  }
+}
