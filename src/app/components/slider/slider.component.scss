@@ -1,0 +1,49 @@
+@import "../../../styles/colors";
+@import "../../../styles/fonts";
+
+:host {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+div.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+
+  & > * {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  & .hero {
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem;
+    gap: 1.5rem;
+
+    h1 {
+      font-family: $leagueSpartan-semibold;
+      font-size: 3rem;
+      color: $black;
+    }
+
+    p {
+      font-family: $leagueSpartan-medium;
+      color: $dark-gray;
+      line-height: 1.5rem;
+    }
+  }
+}
