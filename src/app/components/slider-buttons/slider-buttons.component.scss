@@ -1,0 +1,16 @@
+@import "../../../styles/colors";
+
+:host {
+  display: flex;
+}
+
+button {
+  background-color: $black;
+  width: 100%;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $very-dark-gray;
+  }
+}
