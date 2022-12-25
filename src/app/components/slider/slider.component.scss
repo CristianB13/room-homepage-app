@@ -7,14 +7,26 @@
 }
 
 div.slider {
+  width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
+  position: relative;
+
+  app-slider-buttons {
+    width: 25%;
+    aspect-ratio: 2 / 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
 
   .content {
     display: flex;
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease-in-out;
 
     & > * {
       flex-shrink: 0;
@@ -24,7 +36,6 @@ div.slider {
   }
 
   .hero {
-
     img {
       width: 100%;
       height: 100%;
@@ -37,6 +48,7 @@ div.slider {
     flex-direction: column;
     justify-content: center;
     padding: 0 5rem;
+    padding-bottom: 5rem;
     gap: 1.5rem;
 
     h1 {
