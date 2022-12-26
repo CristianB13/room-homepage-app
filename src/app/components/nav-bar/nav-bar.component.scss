@@ -1,0 +1,96 @@
+@import "../../../styles/colors";
+@import "../../../styles/fonts";
+
+:host {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  @media screen and (max-width: 45rem){
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+  }
+}
+
+ul {
+  display: flex;
+  list-style: none;
+
+  @media screen and (max-width: 45rem){
+    display: none;
+  }
+
+  li {
+    padding: 1rem;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    font-family: $leagueSpartan-semibold;
+    color: $white;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 105%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 0%;
+      background-color: $white;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      width: 70%;
+    }
+  }
+}
+
+button {
+  display: none;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+
+  @media screen and (max-width: 45rem){
+    display: block;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+
+  @media screen and (min-width: 45rem){
+    display: none;
+  }
+
+  @media screen and (max-width: 45rem){
+    ul {
+      display: flex;
+    }
+  }
+  
+  a {
+    color: $black;
+
+    &::before {
+      background-color: $black;
+    }
+  }
+}

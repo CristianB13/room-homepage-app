@@ -1,0 +1,23 @@
+<button type="button" (click)="open = !open">
+  <img src="../../../assets/images/icon-hamburger.svg" />
+</button>
+<div class="menu" [@menu]="open ? 'open' : 'close'">
+  <button type="button" (click)="open = !open">
+    <img src="../../../assets/images/icon-close.svg" />
+  </button>
+  <ul>
+    <li><a href="#">home</a></li>
+    <li><a href="#">shop</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+</div>
+<div class="logo">
+  <img src="../../../assets/images/logo.svg" />
+</div>
+<ul>
+  <li><a href="#">home</a></li>
+  <li><a href="#">shop</a></li>
+  <li><a href="#">about</a></li>
+  <li><a href="#">contact</a></li>
+</ul>
