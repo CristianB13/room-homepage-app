@@ -1,13 +1,22 @@
 <div class="slider">
   <div class="content" [ngStyle]="{transform: 'translateX(-'+(slide*100)+'%)'}">
     <div class="hero">
-      <img src="../../../assets/images/desktop-image-hero-1.jpg" />
+      <picture>
+        <source media="(max-width: 45rem)" srcset="../../../assets/images/mobile-image-hero-1.jpg">
+        <img src="../../../assets/images/desktop-image-hero-1.jpg" />
+      </picture>
     </div>
     <div class="hero">
-      <img src="../../../assets/images/desktop-image-hero-2.jpg" />
+      <picture>
+        <source media="(max-width: 45rem)" srcset="../../../assets/images/mobile-image-hero-2.jpg">
+        <img src="../../../assets/images/desktop-image-hero-2.jpg" />
+      </picture>
     </div>
     <div class="hero">
-      <img src="../../../assets/images/desktop-image-hero-3.jpg" />
+      <picture>
+        <source media="(max-width: 45rem)" srcset="../../../assets/images/mobile-image-hero-3.jpg">
+        <img src="../../../assets/images/desktop-image-hero-3.jpg" />
+      </picture>
     </div>
   </div>
 </div>
